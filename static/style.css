@@ -1,0 +1,168 @@
+/* ---------- Body with Background Image (ALL PAGES) ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: url("/static/library_bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ---------- Light Overlay (LESS opacity → image more visible) ---------- */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* ↓ Reduced opacity (was 0.85, now 0.55) */
+    background: rgba(255, 255, 255, 0.55);
+
+    z-index: -1;
+}
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 42px;
+    color: #1a237e;
+    margin: 0;
+    text-shadow: 2px 2px 6px #999;
+}
+
+.subtitle {
+    color: #333;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+/* ---------- Dashboard Cards ---------- */
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    width: 260px;
+    height: 180px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.card h2 {
+    font-size: 26px;
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #444;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.06);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.35);
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    text-decoration: none;
+    background-color: #1e88e5;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #1565c0;
+    transform: scale(1.05);
+}
+
+/* ---------- Tables ---------- */
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #1e88e5;
+    color: white;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* ---------- Forms ---------- */
+form {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    margin: 30px auto;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #43a047;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        align-items: center;
+    }
+}

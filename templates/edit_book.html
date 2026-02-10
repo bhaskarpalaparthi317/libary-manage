@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <h1>✏️ Edit Book</h1>
+</header>
+
+<div class="center-container">
+    <form method="post">
+        <input type="text" name="title" value="{{ book[1] }}" placeholder="Book Title" required><br>
+        <input type="text" name="author" value="{{ book[2] }}" placeholder="Author Name" required><br>
+        <button type="submit">Update Book</button>
+    </form>
+
+    <br>
+    <a href="/view" class="btn">⬅ Back to View Books</a>
+</div>
+
+</body>
+</html>
